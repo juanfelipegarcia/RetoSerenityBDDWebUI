@@ -52,6 +52,8 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.datatype',   name: 'jackson-datatype-jsr310', version: jacksonVersion
     implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml',  version: jacksonVersion
 
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
     testImplementation group: 'junit',       name: 'junit',        version: '4.12'
 }
 

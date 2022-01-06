@@ -20,9 +20,13 @@ public class AutomationPractice extends PageObject {
             .the("Subject Heading")
             .located(id("uniform-id_contact"));
 
-    public static final Target SUBJECT_HEADING_OPTION = Target
+    public static final Target SUBJECT_HEADING_OPTION_WEBMASTER = Target
             .the("Subject Heading option")
             .located(xpath("//*[@id=\"id_contact\"]/option[3]"));
+
+    public static final Target SUBJECT_HEADING_OPTION_CUSTUMER = Target
+            .the("Subject Heading option")
+            .located(xpath("//*[@id=\"id_contact\"]/option[2]"));
 
     public static final Target EMAIL = Target
             .the("Email address")
@@ -40,9 +44,7 @@ public class AutomationPractice extends PageObject {
             .the("Button sutmit message")
             .located(id("submitMessage"));
 
-
     //For validations
-
     public static final Target MESSAGE_VALIDATION = Target
             .the("Message comfirm send")
             .located(xpath("//*[@id=\"center_column\"]/p"));

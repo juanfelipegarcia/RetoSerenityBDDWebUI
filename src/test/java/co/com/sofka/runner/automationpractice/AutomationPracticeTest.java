@@ -7,9 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/automationpractice/automationpractice.feature"},
+        features = {"src/test/resources/features/automationpractice/automationpracticecontactus.feature",
+                    "src/test/resources/features/automationpractice/automationpracticesignin.feature"},
         glue = {"co.com.sofka.stepdefinition.automationpractice"},
-        tags = {"not @registro"}
+        tags = {"not @registro2",
+                "not @registro1"}
 )
 public class AutomationPracticeTest {
 }
