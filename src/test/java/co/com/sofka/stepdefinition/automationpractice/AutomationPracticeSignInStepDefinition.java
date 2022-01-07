@@ -102,6 +102,7 @@ public class AutomationPracticeSignInStepDefinition extends Setup {
                     browseCreateAccount()
                             .withEmail(user2.getEmail()),
                     fillSignInAllForm()
+
                             .andName(user2.getName())
                             .andLastName(user2.getLastName())
                             .andPassword(user2.getPassword())
@@ -115,7 +116,7 @@ public class AutomationPracticeSignInStepDefinition extends Setup {
                             .andMovilePhone(user2.getMovilePhone())
                             .andAliasAddress(user2.getAliasAddress())
             );
-
+            LOGGER.info(user2.getTitle());
             LOGGER.info("** // Inicio Registro de usuario 2 con el todos de campos  //");
         }catch (Exception e){
             LOGGER.error(e);
@@ -175,7 +176,7 @@ public class AutomationPracticeSignInStepDefinition extends Setup {
         String aliasAddress = "The "+name+" "+lasName+" House";
 
         user2 = new AutomationPracticeSignInModel();
-        user2.setTitle(MR);
+
         user2.setName(name);
         user2.setLastName(lasName);
         user2.setEmail(email);

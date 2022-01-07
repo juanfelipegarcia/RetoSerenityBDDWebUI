@@ -1,17 +1,23 @@
 package co.com.sofka.tasks.automationpractice;
 
+
 import co.com.sofka.utils.Title;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.conditions.Check;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
 import static co.com.sofka.userinterfaces.automationpractice.AutomationPractice.*;
+import static co.com.sofka.utils.Title.MR;
+import static co.com.sofka.utils.Title.MRS;
 
 public class FillSignInAllForm implements Task {
+    public static Logger LOGGER = Logger.getLogger(FillSignInAllForm.class);
 
     private List<Title> title;
     private String name;
@@ -33,7 +39,6 @@ public class FillSignInAllForm implements Task {
     private String homePhone;
     private String movilePhone;
     private String aliasAddress;
-
 
     public FillSignInAllForm withTitle(List<Title> title) {
         this.title = title;
@@ -139,8 +144,8 @@ public class FillSignInAllForm implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
 
-
-                Scroll.to(FIRST_NAME),
+                Scroll.to(STAR_CREATE_ACCOUNT),
+                Click.on(MAN),
                 Click.on(FIRST_NAME),
                 Enter.theValue(name).into(FIRST_NAME),
                 Click.on(LAST_NAME),
@@ -180,14 +185,7 @@ public class FillSignInAllForm implements Task {
                 Click.on(BUTTON_REGISTER),
                 Scroll.to(USER_VALIDATION2)
 
-
-
-
-
-
         );
-
-
 
     }
 

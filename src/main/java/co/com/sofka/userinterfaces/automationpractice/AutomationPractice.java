@@ -52,13 +52,17 @@ public class AutomationPractice extends PageObject {
             .the("Create an account")
             .located(id("SubmitCreate"));
 
-    public static final Target MR = Target
-            .the("Mr")
-            .located(id("id_gender1"));
+    public static final Target STAR_CREATE_ACCOUNT = Target
+            .the("Start Create an account")
+            .located(xpath("//*[@id=\"account-creation_form\"]/div[1]/div[1]/label"));
 
-    public static final Target MRS = Target
+    public static final Target MAN = Target
+            .the("Mr")
+            .located(xpath("//*[@id=\"account-creation_form\"]/div[1]/div[1]/div[1]"));
+
+    public static final Target WOMAN = Target
             .the("Mrs")
-            .located(id("id_gender2"));
+            .located(xpath("//*[@id=\"account-creation_form\"]/div[1]/div[1]/div[2]"));
 
     public static final Target FIRST_NAME = Target
             .the("First name")
@@ -159,7 +163,6 @@ public class AutomationPractice extends PageObject {
     public static final Target CONTAINER_INFO = Target
             .the("Container info")
             .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[1]/h3"));
-
 
     //For validations
     public static final Target MESSAGE_VALIDATION = Target

@@ -81,8 +81,6 @@ public class FillSignInMandatoryForm implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
 
-
-
                 Scroll.to(FIRST_NAME),
                 Click.on(FIRST_NAME),
                 Enter.theValue(name).into(FIRST_NAME),
@@ -106,8 +104,6 @@ public class FillSignInMandatoryForm implements Task {
                 Scroll.to(MY_ADDRESS),
                 Click.on(MY_ADDRESS),
                 Scroll.to(CONTAINER_INFO)
-
-
 
         );
     }

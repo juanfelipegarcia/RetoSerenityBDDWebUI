@@ -10,9 +10,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features/automationpractice/automationpracticecontactus.feature",
                 "src/test/resources/features/automationpractice/automationpracticesignin.feature"},
         glue = {"co.com.sofka.stepdefinition.automationpractice"},
-        tags = {"not @registro1",
-                "not @contacto1",
-                "not @contacto2"}
+        tags = {""}
 )
 public class AutomationPracticeTest {
 }
