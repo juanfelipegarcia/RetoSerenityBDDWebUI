@@ -80,13 +80,33 @@ public class FillSignInMandatoryForm implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+
+
+
                 Scroll.to(FIRST_NAME),
                 Click.on(FIRST_NAME),
                 Enter.theValue(name).into(FIRST_NAME),
                 Click.on(LAST_NAME),
                 Enter.theValue(lastName).into(LAST_NAME),
                 Click.on(PASSWORD),
-                Enter.theValue(lastName).into(PASSWORD)
+                Enter.theValue(password).into(PASSWORD),
+                Scroll.to(ADDRESS),
+                Click.on(ADDRESS),
+                Enter.theValue(address).into(ADDRESS),
+                Click.on(CITY),
+                Enter.theValue(city).into(CITY),
+                Click.on(STATE),
+                Click.on(STATE_SELECT),
+                Click.on(ZIP_CODE),
+                Enter.theValue(zip).into(ZIP_CODE),
+                Click.on(MOBILE_PHONE),
+                Enter.theValue(movilePhone).into(MOBILE_PHONE),
+                Scroll.to(BUTTON_REGISTER),
+                Click.on(BUTTON_REGISTER),
+                Scroll.to(MY_ADDRESS),
+                Click.on(MY_ADDRESS),
+                Scroll.to(CONTAINER_INFO)
+
 
 
         );

@@ -35,13 +35,13 @@ public class FillContacUsWebmasterForm implements Task {
         actor.attemptsTo(
                 Scroll.to(SUBJECT_HEADING_OPTION_WEBMASTER),
                 Click.on(SUBJECT_HEADING_OPTION_WEBMASTER),
-                Scroll.to(EMAIL),
+
                 Enter.theValue(email).into(EMAIL),
-                Scroll.to(ORDER_REFERENCE),
+
                 Enter.theValue(order_reference).into(ORDER_REFERENCE),
-                Scroll.to(MESSAGE),
+
                 Enter.theValue(message).into(MESSAGE),
-                Scroll.to(BUTTON_SUTMITMESSAGE),
+
                 Click.on(BUTTON_SUTMITMESSAGE)
         );
     }

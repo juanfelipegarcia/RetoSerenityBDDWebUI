@@ -72,13 +72,25 @@ public class AutomationPractice extends PageObject {
             .the("Password")
             .located(id("passwd"));
 
+    public static final Target DAY = Target
+            .the("Day")
+            .located(id("uniform-days"));
+
     public static final Target DAY_BIRTH = Target
             .the("Day birth")
             .located(xpath("//*[@id=\"days\"]/option[15]"));
 
+    public static final Target MONTH = Target
+            .the("Month")
+            .located(id("uniform-months"));
+
     public static final Target MONTH_BIRTH = Target
             .the("Month birth")
             .located(xpath("//*[@id=\"months\"]/option[3]"));
+
+    public static final Target YEAR = Target
+            .the("Day")
+            .located(id("uniform-years"));
 
     public static final Target YEAR_BIRTH = Target
             .the("Year birth")
@@ -99,6 +111,10 @@ public class AutomationPractice extends PageObject {
     public static final Target ADDRESS = Target
             .the("address")
             .located(id("address1"));
+
+    public static final Target ADDRESS_ADD = Target
+            .the("address")
+            .located(id("address2"));
 
     public static final Target CITY = Target
             .the("CITY")
@@ -136,11 +152,50 @@ public class AutomationPractice extends PageObject {
             .the("Register")
             .located(id("submitAccount"));
 
+    public static final Target MY_ADDRESS = Target
+            .the("My address")
+            .located(xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[3]"));
+
+    public static final Target CONTAINER_INFO = Target
+            .the("Container info")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[1]/h3"));
+
 
     //For validations
     public static final Target MESSAGE_VALIDATION = Target
             .the("Message comfirm send")
             .located(xpath("//*[@id=\"center_column\"]/p"));
+
+    public static final Target NAME_LASTNAME_VALIDATION = Target
+            .the("Name and lastname send")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[2]"));
+
+    public static final Target ADDRESS_VALIDATION = Target
+            .the("Address send")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[4]"));
+
+    public static final Target CITY_VALIDATION = Target
+            .the("City send")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[5]/span[1]"));
+
+    public static final Target ZIP_VALIDATION = Target
+            .the("Zip code send")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[5]/span[3]"));
+
+    public static final Target MOBILE_PHONE_VALIDATION = Target
+            .the("Mobile phone send")
+            .located(xpath("//*[@id=\"center_column\"]/div[1]/div/div/ul/li[8]/span"));
+
+    public static final Target USER_VALIDATION = Target
+            .the("User  validation")
+            .located(cssSelector(".account :nth-child(1)"));
+
+    public static final Target USER_VALIDATION2 = Target
+            .the("User  validation")
+            .located(xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span"));
+
+
+
 
 
 

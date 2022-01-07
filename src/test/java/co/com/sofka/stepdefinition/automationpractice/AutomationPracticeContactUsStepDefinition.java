@@ -130,22 +130,24 @@ public class AutomationPracticeContactUsStepDefinition extends Setup {
         String fullName = StringUtils.deleteWhitespace(usFaker.name().fullName()) ;
         String email = fullName+"@gmail.com";
         String orderReference = usFaker.bothify("######-?");
+        String message = usFaker.lorem().fixedString(500);
 
         cliente1 = new AutomationPracticeContactUsModel();
         cliente1.setEmail(email);
         cliente1.setOrder_reference(orderReference);
-        cliente1.setMessage("Estes en el mensaje del Contact Us para el Administrador de página web");
+        cliente1.setMessage(message);
     }
 
     private void generateCliente2(){
         String fullName = StringUtils.deleteWhitespace(usFaker.name().fullName());
         String email = fullName+"@hotmail.com";
         String orderReference = usFaker.bothify("######-?");
+        String message = usFaker.lorem().fixedString(500);
 
         cliente2 = new AutomationPracticeContactUsModel();
         cliente2.setEmail(email);
         cliente2.setOrder_reference(orderReference);
-        cliente2.setMessage("Estes en el mensaje del Contact Us para Servicio al Cliente");
+        cliente2.setMessage(message);
     }
 
     private String compareInWithSystemOutcome(){

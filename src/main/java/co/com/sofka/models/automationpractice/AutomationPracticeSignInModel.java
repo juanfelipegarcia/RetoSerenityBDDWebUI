@@ -2,6 +2,7 @@ package co.com.sofka.models.automationpractice;
 
 import co.com.sofka.utils.Title;
 
+import java.util.Collections;
 import java.util.List;
 
 public class AutomationPracticeSignInModel {
@@ -22,6 +23,7 @@ public class AutomationPracticeSignInModel {
     private String city;
     private String state;
     private String zip;
+    private String addInformation;
     private String homePhone;
     private String movilePhone;
     private String aliasAddress;
@@ -30,8 +32,8 @@ public class AutomationPracticeSignInModel {
         return title;
     }
 
-    public void setTitle(List<Title> title) {
-        this.title = title;
+    public void setTitle(Title title) {
+        this.title = Collections.singletonList(title);
     }
 
     public String getName() {
@@ -152,6 +154,14 @@ public class AutomationPracticeSignInModel {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    public String getAddInformation() {
+        return addInformation;
+    }
+
+    public void setAddInformation(String addInformation) {
+        this.addInformation = addInformation;
     }
 
     public String getHomePhone() {
