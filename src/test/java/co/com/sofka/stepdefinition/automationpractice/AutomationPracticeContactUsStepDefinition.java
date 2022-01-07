@@ -29,8 +29,8 @@ public class AutomationPracticeContactUsStepDefinition extends Setup {
 
     public static Logger LOGGER = Logger.getLogger(AutomationPracticeContactUsStepDefinition.class);
 
-   private AutomationPracticeContactUsModel cliente1;
-   private AutomationPracticeContactUsModel cliente2;
+    private AutomationPracticeContactUsModel cliente1;
+    private AutomationPracticeContactUsModel cliente2;
 
     Faker usFaker = new Faker(new Locale("en-US"));
 

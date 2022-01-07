@@ -8,10 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/automationpractice/automationpracticecontactus.feature",
-                    "src/test/resources/features/automationpractice/automationpracticesignin.feature"},
+                "src/test/resources/features/automationpractice/automationpracticesignin.feature"},
         glue = {"co.com.sofka.stepdefinition.automationpractice"},
-        tags = {"not @registro2",
-                "not @registro1"}
+        tags = {""}
 )
 public class AutomationPracticeTest {
 }

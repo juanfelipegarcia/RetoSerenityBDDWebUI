@@ -14,7 +14,7 @@ public class AutomationPractice implements Question<Boolean> {
         return (MESSAGE_VALIDATION.resolveFor(actor).containsOnlyText(MESSAGE_CONFIRM));
     }
 
-    public static AutomationPractice automationPractice(){
+    public static AutomationPractice automationPractice() {
         return new AutomationPractice();
     }
 }
